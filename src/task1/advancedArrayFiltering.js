@@ -1,10 +1,20 @@
 function customFilterUnique(array, callback) {
-  const unique = new Map();
+  const count = new Map();
+  const result = [];
 
-  return array.filter((item) => {
+  array.forEach((item) => {
     const key = callback(item);
-    return unique.has(key) ? false : unique.set(key, true);
+    count.set(key, (count.get(key) || 0) + 1);
   });
+
+  array.forEach((item) => {
+    const key = callback(item);
+    if (count.get(key) === 1) {
+      result.push(item);
+    }
+  });
+
+  return result;
 }
 
 const uniqueByName = (person) => person.name;
