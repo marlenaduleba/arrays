@@ -7,6 +7,4 @@ function customShuffle(array) {
   return result;
 }
 
-console.log(customShuffle([1, 2, 3, 4, 5]));
-
 module.exports = customShuffle;
