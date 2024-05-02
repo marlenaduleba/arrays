@@ -1,5 +1,3 @@
-const { people } = require("../data/testData");
-
 function customFilterUnique(array, callback) {
   const unique = new Map();
 
@@ -9,8 +7,6 @@ function customFilterUnique(array, callback) {
   });
 }
 
-const uniqueByAge = (person) => person.age;
+const uniqueByName = (person) => person.name;
 
-console.log(customFilterUnique(people, uniqueByAge));
-
-module.exports = {customFilterUnique, uniqueByAge};
+module.exports = { customFilterUnique, uniqueByName };
