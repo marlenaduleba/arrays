@@ -10,8 +10,4 @@ function chunkArray(array, size) {
   return chunked;
 }
 
-const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-console.log(chunkArray(testArray, 2));
-
-module.exports = { chunkArray, testArray };
+module.exports = chunkArray;
